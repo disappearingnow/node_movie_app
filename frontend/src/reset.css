@@ -12,7 +12,8 @@ a {
   color: black;
 }
 
-input {
+input:focus,
+input:focus-visible {
   outline: none;
 }
 
