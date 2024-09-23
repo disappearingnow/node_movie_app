@@ -1,0 +1,13 @@
+.textinput {
+  padding: 2px 4px;
+  font-size: 18px;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(134, 134, 134);
+}
+
+.textinput:active,
+.textinput:focus-visible {
+  border-color: rgb(82, 156, 48);
+}
