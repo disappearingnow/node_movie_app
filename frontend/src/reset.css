@@ -12,6 +12,10 @@ a {
   color: black;
 }
 
+input {
+  outline: none;
+}
+
 html,
 body,
 div,
