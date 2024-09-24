@@ -1,0 +1,13 @@
+.nav {
+  background: var(--color-blue);
+  display: flex;
+  align-items: center;
+  padding: var(--gap-xlarge);
+}
+
+.ul {
+  width: fit-content;
+  display: flex;
+  gap: var(--gap-xlarge);
+  font-size: var(--font-medium);
+}
