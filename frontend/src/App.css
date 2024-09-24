@@ -1,4 +1,9 @@
 :root {
+  --color-white: #eaeaea;
+  --color-black: #282828;
+  --color-main: #498467;
+  --color-secondary: #ce796b;
+  --color-tertiary: #4381c1;
   --space-base: 1rem;
   --space-1: calc(var(--space-base) * 0.5);
   --space-2: calc(var(--space-base) * 1);
