@@ -4,9 +4,12 @@
   --color-main: #498467;
   --color-secondary: #ce796b;
   --color-tertiary: #4381c1;
-  --space-base: 1rem;
-  --space-1: calc(var(--space-base) * 0.5);
-  --space-2: calc(var(--space-base) * 1);
-  --space-3: calc(var(--space-base) * 2);
-  --space-4: calc(var(--space-base) * 4);
+  --ds-base: 1rem;
+  --space-1: calc(var(--ds-base) * 0.5);
+  --space-2: calc(var(--ds-base) * 1);
+  --space-3: calc(var(--ds-base) * 2);
+  --space-4: calc(var(--ds-base) * 4);
+  --font-1: calc(var(--ds-base) * 0.8);
+  --font-2: calc(var(--ds-base) * 1.2);
+  --font-3: calc(var(--ds-base) * 1.5);
 }
