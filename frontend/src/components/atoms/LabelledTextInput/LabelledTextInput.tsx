@@ -1,6 +1,6 @@
 import { ChangeEvent, Dispatch } from "react";
 import { InputTypes } from "../../../_shared/enums";
-
+import styles from "./styles.module.css";
 interface Interface {
   name: string;
   id: string;
@@ -28,7 +28,7 @@ export default function LabelledTextInput({
     setValue(e.target.value);
   }
   return (
-    <div>
+    <div className={styles.inputContainer}>
       <label htmlFor={name}>{labelText}</label>
       <input
         type={type}

@@ -1,0 +1,10 @@
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-1);
+  }
+  
+  .inputContainer input {
+    padding: var(--size-1);
+  }
+  
