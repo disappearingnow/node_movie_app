@@ -1,4 +1,5 @@
+import { RegisterForm } from "../../components/molecules";
+
 export default function RegisterPage() {
-    return <div>Register Page</div>;
-  }
-  
+  return <RegisterForm />;
+}

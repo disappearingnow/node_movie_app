@@ -1,4 +1,5 @@
+import { LoginForm } from "../../components/molecules";
+
 export default function LoginPage() {
-    return <div>Login Page</div>;
-  }
-  
+  return <LoginForm />;
+}
