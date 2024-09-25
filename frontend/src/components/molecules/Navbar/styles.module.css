@@ -1,13 +1,16 @@
 .nav {
-  background: var(--color-blue);
+  height: fit-content;
+  background: var(--color-black);
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  padding: var(--gap-xlarge);
+  padding: var(--size-3);
 }
 
 .ul {
   width: fit-content;
   display: flex;
-  gap: var(--gap-xlarge);
-  font-size: var(--font-medium);
+  color: var(--color-white);
+  gap: var(--size-5);
+  font-size: var(--font-size-3);
 }
