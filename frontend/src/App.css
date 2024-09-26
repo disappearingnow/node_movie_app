@@ -23,9 +23,9 @@ button {
   font: 1em var(--font-neo-grotesque);
 }
 
-body {
+#root {
   height: 100vh;
-  background: var(--color-white);
+  background: var(--gray-0);
   display: grid;
   grid-template-rows: auto 1fr;
 }
