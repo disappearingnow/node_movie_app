@@ -1,6 +1,6 @@
 .nav {
   height: fit-content;
-  background: var(--gray-11);
+  background: var(--color-black);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -10,7 +10,7 @@
 .ul {
   width: fit-content;
   display: flex;
-  color: var(--gray-1);
+  color: var(--color-white);
   gap: var(--size-5);
   font-size: var(--font-size-3);
 }

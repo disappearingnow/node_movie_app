@@ -1,9 +1,13 @@
 @import "../node_modules/open-props/open-props.min.css";
 
 :root {
-  --color-white: #eaeaea;
-  --color-grey: #d4d4d4;
-  --color-black: #282828;
+  --color-white: var(--gray-0);
+  --color-grey-lighter: var(--gray-2);
+  --color-grey-light: var(--gray-3);
+  --color-grey: var(--gray-5);
+  --color-grey-dark: var(--gray-7);
+  --color-grey-darker: var(--gray-8);
+  --color-black: var(--gray-10);
   --color-main: #498467;
   --color-secondary: #ce796b;
   --color-tertiary: #4381c1;
@@ -25,7 +29,7 @@ button {
 
 #root {
   height: 100vh;
-  background: var(--gray-0);
+  background: var(--color-white);
   display: grid;
   grid-template-rows: auto 1fr;
 }
