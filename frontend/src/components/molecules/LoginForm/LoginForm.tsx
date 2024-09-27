@@ -1,4 +1,4 @@
-import { useState, FormEvent } from "react";
+import { useState, useEffect, FormEvent } from "react";
 import { LabelledTextInput } from "../../atoms/index";
 import { InputTypes } from "../../../_shared/enums";
 import styles from "../_shared/form.module.css";
@@ -6,11 +6,35 @@ import styles from "../_shared/form.module.css";
 export default function LoginForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [fetching, setFetching] = useState(false);
+  const loginUrl = "http://localhost:4000/login";
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log({ username, password });
+    setFetching(true);
+    try {
+      const loginAttempt = await fetch(loginUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (!loginAttempt.ok) {
+        throw new Error(`Response status: ${loginAttempt.status}`);
+      }
+
+      setFetching(false);
+    } catch (err) {
+      console.error(err);
+      setFetching(false);
+    }
   }
+
+  useEffect(() => {
+    console.log(fetching);
+  }, [fetching]);
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
@@ -38,7 +62,9 @@ export default function LoginForm() {
           setValue={setPassword}
         />
       </div>
-      <button type="submit">Sign In</button>
+      <button type="submit" disabled={fetching}>
+        Sign In
+      </button>
     </form>
   );
 }
