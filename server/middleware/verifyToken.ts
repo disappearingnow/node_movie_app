@@ -5,17 +5,19 @@ import dotenv from "dotenv";
 dotenv.config();
 const secret = process.env.JWT_SECRET!;
 
-function verifyToken(req: Request, res: Response, next: NextFunction): void {
+export default function verifyToken(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): void {
   const token = req.headers?.authorization;
 
   if (!token) {
-    req.body.tokenPresent = "false";
-    next();
+    res.status(401).send("Unauthorized");
   } else {
     jwt.verify(token.split(" ")[1], secret, (err, decoded) => {
       if (err) {
-        req.body.tokenPresent = "false";
-        next();
+        res.status(401).send("Unauthorized");
       }
       req.body.user = decoded;
       next();
