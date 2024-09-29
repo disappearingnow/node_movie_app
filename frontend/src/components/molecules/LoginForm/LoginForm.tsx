@@ -1,4 +1,4 @@
-import { useState, useEffect, FormEvent } from "react";
+import { useState, FormEvent } from "react";
 import { LabelledTextInput } from "../../atoms/index";
 import { InputTypes } from "../../../_shared/enums";
 import styles from "../_shared/form.module.css";
@@ -31,10 +31,6 @@ export default function LoginForm() {
       setFetching(false);
     }
   }
-
-  useEffect(() => {
-    console.log(fetching);
-  }, [fetching]);
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
